@@ -236,6 +236,10 @@ You can control the Wandb logging behavior by modifying the settings in the `con
 
 This integration allows you to compare multiple runs, track hyperparameter changes, and share visual results across team members.
 
+### Limitations
+
+While the current implementation of the tokenizer in this project supports special tokens (e.g., `<|endoftext|>`, `<|fim_prefix|>`, etc.), it does not yet incorporate them into the pre-training data pipeline. As a result, special tokens are handled correctly during inference and evaluation, but they are not part of the training data by default. In future updates, the training data processing pipeline should be adjusted to include appropriate handling of special tokens, ensuring they are properly integrated during training. 
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
