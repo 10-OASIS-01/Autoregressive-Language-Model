@@ -2,7 +2,7 @@
 
 This project provides a **hands-on implementation** of an autoregressive Transformer-based language model. It offers a comprehensive pipeline that covers data processing, model training, evaluation, and inference. What sets this project apart is that the implementation begins from the **ground up**, starting with **manual tokenization**. This choice provides transparency into the entire process of building a language model, giving users full control and insight into each step of the workflow.
 
-By including a **custom-built tokenizer**, similar to the ones used in models like GPT-4, the project offers a valuable opportunity for beginners in **Deep Learning** and **Natural Language Processing (NLP)** to learn how core components of a Transformer model are constructed and fine-tuned. The project is designed to be **beginner-friendly**, with clear explanations, flexible configurations, and easy-to-follow steps for training and evaluating your own models.
+By including a custom-built **Autoregressive Language Model**, which operates on principles similar to those used in GPT models, this project provides a valuable opportunity for beginners in **Deep Learning** and **Natural Language Processing (NLP)** to learn how core components of a Transformer-based language model are constructed and fine-tuned. The project is designed to be **beginner-friendly**, with clear explanations, flexible configurations, and easy-to-follow steps for training and evaluating your own models.
 
 Whether you're just starting with deep learning or looking to explore how language models work, this project provides an accessible entry point to understanding the intricate details of tokenization, model architecture, and training, without relying on high-level abstractions.
 
