@@ -1,0 +1,95 @@
+## I/O settings
+#out_dir: "output_directory"
+#eval_interval: 2000
+#log_interval: 1
+#eval_iters: 200
+#eval_only: false
+#always_save_checkpoint: true
+#init_from: "scratch"  # "scratch" or "resume"
+#
+## Wandb logging
+#wandb_log: false
+#wandb_project: "owt"
+#wandb_run_name: "LanguageModel"
+#
+## Data settings
+#dataset: "tiny_shakespeare_data"
+#gradient_accumulation_steps: 40  # Simulate larger batch sizes
+#batch_size: 12
+#block_size: 512
+#vocab_size: 32768
+#
+## Model architecture settings
+#n_layer: 4
+#n_head: 4
+#n_embd: 512
+#dropout: 0.1
+#bias: false
+#
+## AdamW optimizer settings
+#learning_rate: 6e-4
+#max_iters: 60000
+#weight_decay: 1e-1
+#beta1: 0.9
+#beta2: 0.95
+#grad_clip: 1.0
+#
+## Learning rate decay settings
+#decay_lr: true
+#warmup_iters: 2000
+#lr_decay_iters: 60000
+#min_lr: 6e-5
+#
+## System settings
+#device: "cuda"
+#dtype: "bfloat16"
+#compile: false
+
+
+# I/O settings
+out_dir: "output_directory"
+model_name: "goodboy"
+eval_interval: 200
+log_interval: 10
+eval_iters: 200
+eval_only: false
+always_save_checkpoint: true
+init_from: "scratch"  # "scratch" or "resume"
+
+# Wandb logging
+wandb_log: true
+wandb_project: "owt"
+wandb_run_name: "LanguageModel"
+
+# Data settings
+dataset: "tiny_shakespeare_data"
+gradient_accumulation_steps: 8  # Simulate larger batch sizes
+batch_size: 16
+block_size: 128
+vocab_size: 32768
+
+# Model architecture settings
+n_layer: 4
+n_head: 4
+n_embd: 512
+dropout: 0.1
+bias: True
+
+# AdamW optimizer settings
+learning_rate: 6e-6
+max_iters: 10000
+weight_decay: 1e-1
+beta1: 0.9
+beta2: 0.95
+grad_clip: 1.0
+
+# Learning rate decay settings
+decay_lr: true
+warmup_iters: 1000
+lr_decay_iters: 8000
+min_lr: 6e-7
+
+# System settings
+device: "cuda"
+dtype: "bfloat16"
+compile: false

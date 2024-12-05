@@ -1,0 +1,42 @@
+[
+    {
+        "start_string": "O noble prince, I bring thee news of great consequence.",
+        "target_text": "O noble prince, I bring thee news of great consequence. For on this eve, in shadowed glade, did I behold a sight most strange. A serpent coiled 'round the old oak tree, hissing of betrayals and of blood, and shadows moved, as if they spoke, of secrets hidden from the sun."
+    },
+    {
+        "start_string": "My lord, the stars above doth portend of ill omens.",
+        "target_text": "My lord, the stars above doth portend of ill omens. The heavens weep as dark clouds form, a shroud upon the moon. Voices whisper in the wind, tales of curses and lost love, as the night brings shadows deep and mysteries yet unseen."
+    },
+    {
+        "start_string": "Fair maiden, thy beauty shines as a beacon in the night.",
+        "target_text": "Fair maiden, thy beauty shines as a beacon in the night. Yet shadows doth fall upon thee, secrets linger in thine eyes. The rose doth bloom, yet thorns await, hidden 'neath thy smile. What secrets dost thou keep, so deep within thy heart concealed?"
+    },
+    {
+        "start_string": "O brave knight, return with tales of valor and of glory.",
+        "target_text": "O brave knight, return with tales of valor and of glory. In battle fierce, thy sword did dance, a gleam in the moon’s light. Yet upon thy face, a solemn gaze, as if a burden borne. Speak now of deeds done, and those who did not return with thee."
+    },
+    {
+        "start_string": "Hark! A storm approaches, dark and full of wrath.",
+        "target_text": "Hark! A storm approaches, dark and full of wrath. The thunder roars, the lightning strikes, tearing skies asunder. In the tempest’s eye, a figure stands, unmoved by rain or fear. He brings with him tales of woe, secrets kept from mortal ears."
+    },
+    {
+        "start_string": "Good sir, hast thou seen aught amiss this weary night?",
+        "target_text": "Good sir, hast thou seen aught amiss this weary night? The village sleeps, yet whispers wake, tales of shadows moving fast. A chill doth sweep across the land, as if a ghostly hand. Be wary now, for not all eyes that watch are made of flesh and bone."
+    },
+    {
+        "start_string": "Dearest friend, my heart is heavy with words unspoken.",
+        "target_text": "Dearest friend, my heart is heavy with words unspoken. For days have passed since last we met, and secrets now do grow. A tale of sorrow, hidden deep, lies within my breast. Pray, lend thine ear, for I must speak ere silence steals my breath."
+    },
+    {
+        "start_string": "Young squire, the path before thee is laden with peril.",
+        "target_text": "Young squire, the path before thee is laden with peril. Beyond the hills, the wolves do roam, their howls do pierce the night. Yet courage bright as morning’s light shall guide thee through the dark. Take heed, and may thy steps be true, for shadows hide the way."
+    },
+    {
+        "start_string": "Oh, sweet lady, dost thou not see the danger nigh?",
+        "target_text": "Oh, sweet lady, dost thou not see the danger nigh? A figure cloaked in mystery, doth follow close behind. His eyes like embers, burn with fire, his breath as cold as stone. Beware, fair maiden, lest thou fall into his shadowed snare."
+    },
+    {
+        "start_string": "Gentlemen, I fear our time is short, the dawn is near.",
+        "target_text": "Gentlemen, I fear our time is short, the dawn is near. The air grows cold, the sky doth pale, yet still our task remains. For truths once hidden now arise, like shadows into light. We must resolve ere morning breaks, or lose our chance forever."
+    }
+]
