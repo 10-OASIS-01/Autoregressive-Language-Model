@@ -116,14 +116,22 @@ Make sure to configure the `config.yaml` file according to your requirements bef
 
 To evaluate the trained model, use the following command:
 ```sh
-python evaluate.py --input_file <input_file> --model_path <model_path> --tokenizer_path <tokenizer_path> --device <device>
+python evaluate.py
+  --input_file <input_file> \
+  --model_path <model_path> \
+  --tokenizer_path <tokenizer_path> \
+  --device <device>
 ```
 
 ### Inference
 
 To generate text using the trained model, run:
 ```sh
-python inference.py --model_path <model_path> --tokenizer_path <tokenizer_path> --device <device> --num_chars <num_chars> --top_k <top_k> --start_string <start_string>
+python inference.py \
+  --model_path <model_path> \
+  --tokenizer_path <tokenizer_path> \
+  --device <device> --num_chars <num_chars> \
+  --top_k <top_k> --start_string <start_string> 
 ```
 
 This README provides an overview of the project, its structure, and usage instructions. Make sure to update the `<repository_url>` and `<repository_directory>` placeholders with the actual values.
