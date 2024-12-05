@@ -100,6 +100,8 @@ autoregressive_language_model/
 
 ### `tokenizer` Directory
 
+The tokenizer used in this project is a custom-trained BPE (Byte Pair Encoding) Tokenizer, similar to the GPT-4 Tokenizer. It supports tokenization using customizable regular expression patterns, including GPT-4 regex patterns. The training code for this tokenizer can be found in another open-source project: [BPEtokenizer](https://github.com/10-OASIS-01/BPEtokenizer).
+
 - `regex.py`: Implementation of a regex-based tokenizer.
 - `wikitext_tokenizer.model`: Pre-trained tokenizer model.
 - `wikitext_tokenizer.vocab`: Vocabulary file for the tokenizer.
