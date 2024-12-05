@@ -121,17 +121,6 @@ python train.py
 ```
 Make sure to configure the `config.yaml` file according to your requirements before running the training script.
 
-### Evaluation
-
-To evaluate the trained model, use the following command:
-```sh
-python evaluate.py
-  --input_file <input_file> \
-  --model_path <model_path> \
-  --tokenizer_path <tokenizer_path> \
-  --device <device>
-```
-
 ### Inference
 
 To generate text using the trained model, run:
@@ -143,4 +132,27 @@ python inference.py \
   --top_k <top_k> --start_string <start_string> 
 ```
 
+### Evaluation
+
+To evaluate the trained model, use the following command:
+```sh
+python evaluate.py
+  --input_file <input_file> \
+  --model_path <model_path> \
+  --tokenizer_path <tokenizer_path> \
+  --device <device>
+```
+
+#### Evaluation Output
+
+The evaluation script calculates and displays the following metrics:
+- **BLEU Score**: Measures similarity between generated and target text based on overlapping n-grams.
+- **ROUGE Scores (ROUGE-1, ROUGE-2, ROUGE-L)**: Measures text overlap by evaluating precision, recall, and F1 scores for unigrams, bigrams, and longest common subsequences.
+- **Perplexity (PPL)**: Evaluates the language model’s performance by analyzing token likelihood.
+
 This README provides an overview of the project, its structure, and usage instructions. Make sure to update the `<repository_url>` and `<repository_directory>` placeholders with the actual values.
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
