@@ -4,7 +4,7 @@ This project provides a **hands-on implementation** of an autoregressive Transfo
 
 Inspired by the [nanoGPT](https://github.com/karpathy/nanoGPT) project by Andrej Karpathy, this implementation has been **reworked** to be more accessible and easier to understand, especially for those new to deep learning and natural language processing (NLP). Several parts of the code, which can be difficult to grasp in nanoGPT, have been **completely rewritten** to improve clarity. Key improvements include:
 
-- **Simplified Data Processing**: The data loading and processing pipeline has been extended to support a wider variety of datasets, with improved control over preprocessing steps.
+- **Hands-on Data Processing**: The data loading and processing pipeline has been extended to support a wider variety of datasets, with improved control over preprocessing steps.
 - **Manual Tokenizer Implementation**: The tokenizer has been built from scratch, providing insight into the tokenization process itself. This avoids the need for pre-trained tokenizers and allows for a deeper understanding of how text is converted into tokens.
 - **Removed Multi-GPU DDP Training**: To make the project more approachable for beginners, the complex multi-GPU Distributed Data Parallel (DDP) training setup has been removed. The project now focuses on single-GPU or CPU training, making it easier to get started without the need for specialized hardware.
 
