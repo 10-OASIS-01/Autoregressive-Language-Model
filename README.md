@@ -15,16 +15,25 @@ This project is a comprehensive implementation of a Transformer-based language m
 
 ## Installation
 
-1. Clone the repository:
-    ```sh
-    git clone <repository_url>
-    cd <repository_directory>
-    ```
+1. **Clone the repository**:
 
-2. Install the required packages:
-    ```sh
-    pip install -r requirements.txt
-    ```
+   ```bash
+   git clone https://github.com/your_username/your_project.git
+   cd your_project
+   ```
+
+2. **Set up a Conda environment**:
+
+   ```bash
+   conda create --name your_env_name python=3.6  # or a higher Python version as needed
+   conda activate your_env_name
+   ```
+
+3. **Install dependencies**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
    
 ## Project Structure
 
