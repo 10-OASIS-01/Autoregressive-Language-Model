@@ -1,6 +1,15 @@
 # Autoregressive Language Model
 
-This project is a comprehensive implementation of a Transformer-based language model, including data processing, training, evaluation, and inference functionalities.
+This project provides a **hands-on implementation** of an autoregressive Transformer-based language model. It offers a comprehensive pipeline that covers data processing, model training, evaluation, and inference. What sets this project apart is that the implementation begins from the **ground up**, starting with **manual tokenization**. This choice provides transparency into the entire process of building a language model, giving users full control and insight into each step of the workflow.
+
+By including a **custom-built tokenizer**, similar to the ones used in models like GPT-4, the project offers a valuable opportunity for beginners in **Deep Learning** and **Natural Language Processing (NLP)** to learn how core components of a Transformer model are constructed and fine-tuned. The project is designed to be **beginner-friendly**, with clear explanations, flexible configurations, and easy-to-follow steps for training and evaluating your own models.
+
+Whether you're just starting with deep learning or looking to explore how language models work, this project provides an accessible entry point to understanding the intricate details of tokenization, model architecture, and training, without relying on high-level abstractions.
+
+## Key Features:
+- **Manual Tokenization**: The tokenization process is implemented from scratch using regular expressions and Byte Pair Encoding (BPE), similar to GPT-style models.
+- **Beginner-Friendly**: The project is designed to be approachable for newcomers to deep learning and NLP, with ample documentation, flexible configuration options, and straightforward scripts.
+- **Customizable and Transparent**: All components, from data processing to model training, are fully customizable, allowing you to modify and experiment with each part of the pipeline.
 
 ## Table of Contents
 
@@ -8,10 +17,13 @@ This project is a comprehensive implementation of a Transformer-based language m
 - [Project Structure](#project-structure)
 - [File Descriptions](#file-descriptions)
 - [Usage](#usage)
+  - [Data Loading and Processing](#data-loading-and-processing)
   - [Training](#training)
-  - [Evaluation](#evaluation)
   - [Inference](#inference)
+  - [Evaluation](#evaluation)
+  - [Weights & Biases (Wandb) Integration](#weights--biases-wandb-integration)
 - [Requirements](#requirements)
+- [License](#license)
 
 ## Installation
 
@@ -107,6 +119,34 @@ The tokenizer used in this project is a custom-trained BPE (Byte Pair Encoding) 
 
 ## Usage
 
+### Data Loading and Processing
+
+To download and process datasets for tokenization, you can run `data/downloaddata.py`. This script supports downloading datasets from the Hugging Face Datasets Hub or from a direct URL.
+
+For example, to process the `wikitext-2-raw-v1` dataset from Hugging Face:
+```sh
+python data/downloaddata.py \
+  --dataset_name "Salesforce/wikitext" \
+  --config_name "wikitext-2-raw-v1" \
+  --block_size 128 \
+  --num_proc 8 \
+  --output_dir "processed_wikitext_data"
+```
+
+Or to process a small text dataset from a URL:
+```sh
+python data/downloaddata.py \
+  --data_url "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt" \
+  --block_size 128 \
+  --output_dir "processed_tiny_shakespeare_data"
+```
+
+This command will:
+- Download the specified dataset or text file.
+- Tokenize the text data using a pre-trained tokenizer.
+- Split the data into training and validation sets.
+- Save the processed data in binary format for efficient loading during training.
+
 ### Training
 
 To train the model, follow these steps:
@@ -132,21 +172,23 @@ To train the model, follow these steps:
 To generate text using the trained model, run:
 ```sh
 python inference.py \
-  --model_path <model_path> \
-  --tokenizer_path <tokenizer_path> \
-  --device <device> --num_chars <num_chars> \
-  --top_k <top_k> --start_string <start_string> 
+    --model_path "output_directory/tiny_shakespeare.pt" \
+    --tokenizer_path "tokenizer/wikitext_tokenizer.model" \
+    --device "cuda" \
+    --num_chars 256 \
+    --top_k 40 \
+    --start_string "ROMEO: 
 ```
 
 ### Evaluation
 
 To evaluate the trained model, use the following command:
 ```sh
-python evaluate.py
-  --input_file <input_file> \
-  --model_path <model_path> \
-  --tokenizer_path <tokenizer_path> \
-  --device <device>
+python evaluate.py \
+  --input_file tiny_shakespeare_data \
+  --model_path output_directory/tiny_shakespeare.pt \
+  --tokenizer_path "tokenizer/wikitext_tokenizer.model" \
+  --device "cuda"
 ```
 
 #### Evaluation Output
@@ -156,7 +198,6 @@ The evaluation script calculates and displays the following metrics:
 - **ROUGE Scores (ROUGE-1, ROUGE-2, ROUGE-L)**: Measures text overlap by evaluating precision, recall, and F1 scores for unigrams, bigrams, and longest common subsequences.
 - **Perplexity (PPL)**: Evaluates the language model’s performance by analyzing token likelihood.
 
-This README provides an overview of the project, its structure, and usage instructions. Make sure to update the `<repository_url>` and `<repository_directory>` placeholders with the actual values.
 ### Weights & Biases (Wandb) Integration
 
 This project integrates with **Weights & Biases** (Wandb) for visualizing the training process and tracking experiments. To enable Wandb logging, follow these steps:
