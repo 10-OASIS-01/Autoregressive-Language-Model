@@ -113,11 +113,23 @@ The tokenizer used in this project is a custom-trained BPE (Byte Pair Encoding) 
 
 ### Training
 
-To train the model, run the following command:
-```sh
-python train.py
-```
-Make sure to configure the `config.yaml` file according to your requirements before running the training script.
+To train the model, follow these steps:
+
+1. **Configure the `config.yaml` file**:
+   - Set the `out_dir` to specify the output directory for saving model checkpoints.
+   - Adjust `eval_interval`, `log_interval`, and `eval_iters` for evaluation and logging frequency.
+   - Set `init_from` to "scratch" to start training from scratch or "resume" to continue from a checkpoint.
+   - Enable or disable Weights & Biases (Wandb) logging by setting `wandb_log` to `true` or `false`.
+   - Specify the dataset name, batch size, block size, and other data settings.
+   - Configure model architecture settings such as the number of layers (`n_layer`), number of heads (`n_head`), embedding size (`n_embd`), and dropout rate (`dropout`).
+   - Set optimizer settings including learning rate, weight decay, and gradient clipping.
+   - Adjust learning rate decay settings if needed.
+   - Specify the device (`cuda` or `cpu`) and data type (`float32`, `bfloat16`, or `float16`).
+
+2. **Run the training script**:
+   ```sh
+   python train.py
+   ```
 
 ### Inference
 
