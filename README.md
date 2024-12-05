@@ -1,16 +1,21 @@
 # Autoregressive Language Model
 
-This project provides a **hands-on implementation** of an autoregressive Transformer-based language model. It offers a comprehensive pipeline that covers data processing, model training, evaluation, and inference. What sets this project apart is that the implementation begins from the **ground up**, starting with **manual tokenization**. This choice provides transparency into the entire process of building a language model, giving users full control and insight into each step of the workflow. The implementation is inspired by the [nanoGPT](https://github.com/karpathy/nanoGPT) project by Andrej Karpathy. Some portions of the code are adapted from this project.
+This project provides a **hands-on implementation** of an autoregressive Transformer-based language model, designed with **beginners in mind**. It offers a comprehensive pipeline that covers data processing, model training, evaluation, and inference. What distinguishes this project is that it starts from the **ground up**, beginning with **manual tokenization**. This approach provides full transparency into the entire process of building a language model, offering users complete control and insight into each step of the workflow.
 
-By including a custom-built **Autoregressive Language Model**, which operates on principles similar to those used in GPT models, this project provides a valuable opportunity for beginners in **Deep Learning** and **Natural Language Processing (NLP)** to learn how core components of a Transformer-based language model are constructed and fine-tuned. The project is designed to be **beginner-friendly**, with clear explanations, flexible configurations, and easy-to-follow steps for training and evaluating your own models.
+Inspired by the [nanoGPT](https://github.com/karpathy/nanoGPT) project by Andrej Karpathy, this implementation has been **reworked** to be more accessible and easier to understand, especially for those new to deep learning and natural language processing (NLP). Several parts of the code, which can be difficult to grasp in nanoGPT, have been **completely rewritten** to improve clarity. Key improvements include:
 
-Whether you're just starting with deep learning or looking to explore how language models work, this project provides an accessible entry point to understanding the intricate details of tokenization, model architecture, and training, without relying on high-level abstractions.
+- **Simplified Data Processing**: The data loading and processing pipeline has been extended to support a wider variety of datasets, with improved control over preprocessing steps.
+- **Manual Tokenizer Implementation**: The tokenizer has been built from scratch, providing insight into the tokenization process itself. This avoids the need for pre-trained tokenizers and allows for a deeper understanding of how text is converted into tokens.
+- **Removed Multi-GPU DDP Training**: To make the project more approachable for beginners, the complex multi-GPU Distributed Data Parallel (DDP) training setup has been removed. The project now focuses on single-GPU or CPU training, making it easier to get started without the need for specialized hardware.
+
+By implementing a **custom-built Autoregressive Language Model** based on principles similar to those in GPT models, this project offers an excellent opportunity for **Deep Learning** and **NLP** beginners to learn how core components of a Transformer model are constructed, trained, and fine-tuned. The project is designed to be **beginner-friendly**, featuring clear documentation, flexible configurations, and simple-to-follow steps for training and evaluating your own models.
+
+Whether you're new to deep learning or exploring the mechanics behind language models, this project serves as a practical entry point, helping you understand the intricacies of tokenization, model architecture, and training without relying on high-level abstractions.
 
 ## Key Features:
-- **Manual Tokenization**: The tokenization process is implemented from scratch using regular expressions and Byte Pair Encoding (BPE), similar to GPT-style models.
-- **Beginner-Friendly**: The project is designed to be approachable for newcomers to deep learning and NLP, with ample documentation, flexible configuration options, and straightforward scripts.
-- **Customizable and Transparent**: All components, from data processing to model training, are fully customizable, allowing you to modify and experiment with each part of the pipeline.
-
+- **Manual Tokenization**: Tokenization is implemented from scratch using regular expressions and Byte Pair Encoding (BPE), following the approach used by GPT models.
+- **Beginner-Friendly**: Designed to be approachable for newcomers to deep learning and NLP, with extensive documentation, flexible configurations, and clear, simple scripts.
+- **Customizable and Transparent**: Every component of the pipeline, from data processing to model training, is fully customizable, allowing you to experiment and adjust the system to your needs.
 ## Table of Contents
 
 - [Installation](#installation)
