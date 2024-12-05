@@ -52,7 +52,6 @@ autoregressive_language_model/
 │   ├── model_unit_tests.py
 │   └── transformer.py
 ├── output_directory/
-│   └── tiny_shakespeare.pt
 ├── tokenizer/
 │   ├── __init__.py
 │   ├── regex.py
@@ -83,31 +82,28 @@ autoregressive_language_model/
 
 ### `data` Directory
 
-- `TextDataset.py`: Defines the `TextDataset` class for loading and processing text data.
-- `downloaddata.py`: Script to download and process datasets for tokenization.
-- `DatasetProcessor.py`: Contains the `DatasetProcessor` class for handling dataset loading, processing, and tokenization.
+- `__init__.py`: Initialization file for the data module.
+- `TextDataset.py`: Defines the `TextDataset` class for loading and processing text data in chunks of a specified block size. It supports memory-mapped arrays for efficient data loading.
+- `downloaddata.py`: Script to download and process datasets for tokenization. It supports downloading datasets from the Hugging Face Datasets Hub or from a direct URL.
+- `DatasetProcessor.py`: Contains the `DatasetProcessor` class for handling dataset loading, processing, and tokenization. It supports both large datasets from Hugging Face and small text datasets from URLs, and saves the processed data in binary format for efficient loading during training.
 
 ### `model` Directory
 
-- `model_unit_tests.py`: Unit tests for the Transformer model.
-- `transformer.py`: Implementation of the Transformer model.
-
-### `output_directory` Directory
-
-- `tiny_shakespeare.pt`: Example of a trained model checkpoint.
+- `model_unit_tests.py`: Unit tests for the Transformer model, verifying various aspects such as forward pass, loss computation, sequence length handling, parameter initialization, and gradient computation.
+- `transformer.py`: Implementation of the Transformer model, including the model architecture, forward pass, and weight initialization.
 
 ### `tokenizer` Directory
 
 The tokenizer used in this project is a custom-trained BPE (Byte Pair Encoding) Tokenizer, similar to the GPT-4 Tokenizer. It supports tokenization using customizable regular expression patterns, including GPT-4 regex patterns. The training code for this tokenizer can be found in another open-source project: [BPEtokenizer](https://github.com/10-OASIS-01/BPEtokenizer).
 
-- `regex.py`: Implementation of a regex-based tokenizer.
+- `regex.py`: Implementation of a regex-based tokenizer. This file contains the `RegexTokenizer` class, which handles tokenization using regular expressions. It supports special tokens and can encode and decode text. The tokenizer uses Byte Pair Encoding (BPE) and can load a pre-trained tokenizer model from a file. The file also includes utility functions for loading the tokenizer and managing token statistics.
 - `wikitext_tokenizer.model`: Pre-trained tokenizer model.
 - `wikitext_tokenizer.vocab`: Vocabulary file for the tokenizer.
 
 ### `utils` Directory
 
-- `helpers.py`: Utility functions for training and evaluation.
-- `sampling.py`: Functions for generating text samples.
+- `helpers.py`: Utility functions for training and evaluation, including optimizer configuration, loss estimation, learning rate scheduling, and evaluation metrics such as BLEU, ROUGE, and perplexity.
+- `sampling.py`: Functions for generating text samples from the trained model, including text generation with temperature and top-k sampling, and printing generated samples.
 
 ## Usage
 
