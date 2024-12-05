@@ -83,7 +83,6 @@ autoregressive_language_model/
 
 ### `data` Directory
 
-- `__init__.py`: Initialization file for the data module.
 - `TextDataset.py`: Defines the `TextDataset` class for loading and processing text data.
 - `downloaddata.py`: Script to download and process datasets for tokenization.
 - `DatasetProcessor.py`: Contains the `DatasetProcessor` class for handling dataset loading, processing, and tokenization.
@@ -92,7 +91,6 @@ autoregressive_language_model/
 
 - `model_unit_tests.py`: Unit tests for the Transformer model.
 - `transformer.py`: Implementation of the Transformer model.
-- `__init__.py`: Initialization file for the model module.
 
 ### `output_directory` Directory
 
@@ -105,13 +103,11 @@ The tokenizer used in this project is a custom-trained BPE (Byte Pair Encoding) 
 - `regex.py`: Implementation of a regex-based tokenizer.
 - `wikitext_tokenizer.model`: Pre-trained tokenizer model.
 - `wikitext_tokenizer.vocab`: Vocabulary file for the tokenizer.
-- `__init__.py`: Initialization file for the tokenizer module.
 
 ### `utils` Directory
 
 - `helpers.py`: Utility functions for training and evaluation.
 - `sampling.py`: Functions for generating text samples.
-- `__init__.py`: Initialization file for the utils module.
 
 ## Usage
 
