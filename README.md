@@ -151,7 +151,38 @@ The evaluation script calculates and displays the following metrics:
 - **Perplexity (PPL)**: Evaluates the language model’s performance by analyzing token likelihood.
 
 This README provides an overview of the project, its structure, and usage instructions. Make sure to update the `<repository_url>` and `<repository_directory>` placeholders with the actual values.
+### Weights & Biases (Wandb) Integration
 
+This project integrates with **Weights & Biases** (Wandb) for visualizing the training process and tracking experiments. To enable Wandb logging, follow these steps:
+
+1. **Install the Wandb package**:
+   
+   If you haven't installed Wandb, do so by running:
+   ```sh
+   pip install wandb
+   ```
+   
+   Before running training, log in to Wandb by executing:
+   ```sh
+   wandb login
+   ```
+
+3. **Configure Wandb in your training script**:
+   
+   In the `train.py` script, Wandb integration is already configured. It logs key metrics like loss, accuracy, and others during the training process. When running the training, Wandb will automatically track the experiment and create an interactive dashboard.
+
+4. **Tracking training with Wandb**:
+   
+   After training, you can view your experiment on the Wandb dashboard:
+   - Go to [Wandb Dashboard](https://wandb.ai) and find your project.
+   - Explore real-time training curves, metrics, and logs.
+
+You can control the Wandb logging behavior by modifying the settings in the `config.yaml` file. The key options to adjust are:
+   - **wandb_project**: Your Wandb project name.
+   - **wandb_run_name**: The name for the specific run.
+   - **wandb_log**: Set to `True` to enable logging, or `False` to disable.
+
+This integration allows you to compare multiple runs, track hyperparameter changes, and share visual results across team members.
 
 ## License
 
