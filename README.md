@@ -35,8 +35,8 @@ Whether you're new to deep learning or exploring the mechanics behind language m
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your_username/your_project.git
-   cd your_project
+   git clone https://github.com/10-OASIS-01/Autoregressive-Language-Model.git
+   cd Autoregressive-Language-Model
    ```
 
 2. **Set up a Conda environment**:
