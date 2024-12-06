@@ -154,7 +154,7 @@ This command will:
 - Split the data into training and validation sets.
 - Save the processed data in binary format for efficient loading during training.
 
-### Training
+### **Training**
 
 To train the model, follow these steps:
 
@@ -171,9 +171,11 @@ To train the model, follow these steps:
 
 2. **Run the training script**:
    ```sh
-   python train.py
+   python train.py --dataset <dataset_name>
    ```
 
+   Replace `<dataset_name>` with the name of the dataset you want to use, either `wikitext-103-raw-v1` or `tiny_shakespeare_data`.
+   
 ### Inference
 
 To generate text using the trained model, run:
