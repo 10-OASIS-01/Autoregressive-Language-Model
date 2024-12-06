@@ -15,6 +15,10 @@ This project is ideal for **Deep Learning** and **NLP** beginners, providing cle
 - **Manual Tokenization**: Implemented using regular expressions and Byte Pair Encoding (BPE), inspired by GPT models.
 - **Beginner-Friendly**: Designed with clear, simple scripts and extensive documentation to help newcomers understand core concepts.
 - **Customizable and Transparent**: Fully customizable pipeline, allowing for easy experimentation and adjustment at every stage.
+- **Extended Data Processing**: Supports a variety of datasets with efficient data loading and preprocessing features.
+- **Advanced Evaluation Metrics**: Provides comprehensive evaluation using BLEU, ROUGE, and Perplexity to assess model performance.
+- **Integration with Weights & Biases (Wandb)**: Built-in Wandb integration tracks experiments and visualizes key metrics in real-time.
+- **Optimized for Experimentation**: Configurable settings for model architecture, optimizer, and training parameters for easy experimentation.
 
 
 ## Table of Contents
