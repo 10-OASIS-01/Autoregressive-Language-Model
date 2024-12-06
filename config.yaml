@@ -1,4 +1,5 @@
 config:
+  # use wikitext-103-raw-v1 dataset
   wikitext-103-raw-v1:
     # I/O settings
     out_dir: "output_directory"
@@ -48,6 +49,7 @@ config:
     dtype: "bfloat16"
     compile: false
 
+  # use tiny_shakespeare dataset
   tiny_shakespeare_data:
     # I/O settings
     out_dir: "output_directory"
