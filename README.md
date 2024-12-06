@@ -162,7 +162,9 @@ To train the model, follow these steps:
 1. **Configure the `config.yaml` file**:
    - Set the `out_dir` to specify the output directory for saving model checkpoints.
    - Adjust `eval_interval`, `log_interval`, and `eval_iters` for evaluation and logging frequency.
-   - Set `init_from` to "scratch" to start training from scratch or "resume" to continue from a checkpoint.
+   - Set `init_from` to either:
+     - `'scratch'`: Start training the model from scratch, which initializes the model weights randomly.
+     - `'resume'`: Continue training from a previously saved checkpoint, or fine-tune the model on a new dataset.
    - Enable or disable Weights & Biases (Wandb) logging by setting `wandb_log` to `true` or `false`.
    - Specify the dataset name, batch size, block size, and other data settings.
    - Configure model architecture settings such as the number of layers (`n_layer`), number of heads (`n_head`), embedding size (`n_embd`), and dropout rate (`dropout`).
