@@ -1,5 +1,6 @@
 import math
 import os
+import sys
 import numpy as np
 import requests
 import tiktoken
@@ -7,11 +8,9 @@ import torch
 from datasets import Features, Sequence, Value
 from datasets import load_dataset
 from tqdm import tqdm
-
+# Append the root directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from tokenizer.regex import load_tokenizer
-
-enc = tiktoken.get_encoding("gpt2")
-
 
 class DatasetProcessor:
     def __init__(self, dataset_name=None, config_name=None, block_size=128, num_proc=8, num_proc_load_dataset=8,
