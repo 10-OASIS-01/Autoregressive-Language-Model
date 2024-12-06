@@ -88,7 +88,7 @@ autoregressive_language_model/
 
 ## File Descriptions
 
-The code for **evaluation**, **inference**, and **sampling** was developed and refined in my other foundational project, *Character-Level Language Modeling*, which can be found at this [GitHub repository](https://github.com/10-OASIS-01/Character_Level_Language_Modeling/blob/main/README.md). The implementation in that project served as the base for the corresponding functionalities in this project, including the generation of text samples and model evaluation procedures.
+The code for **evaluation**, **inference**, and **sampling** was developed and refined in my other foundational project [Character-Level Language Modeling](https://github.com/10-OASIS-01/Character_Level_Language_Modeling/blob/main/README.md). The implementation in that project served as the base for the corresponding functionalities in this project, including the generation of text samples and model evaluation procedures.
 
 ### Root Directory
 
